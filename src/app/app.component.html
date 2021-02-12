@@ -1,12 +1,9 @@
-
-
-<div style="text-align:center">
-  <h1>Terms</h1>
+<div class="mat-typography container">
+  <h2>Terms</h2>
+  <mat-action-list>
+      <button mat-list-item *ngFor="let term of terms$ | async; last as last">
+          Term: {{term.term}}
+          <mat-divider *ngIf="!last"></mat-divider>
+      </button>
+  </mat-action-list>
 </div>
-<h2>Here are the terms created so far: </h2>
-<ul>
-  <li *ngFor="let term of termsList">
-    {{term.term}}
-  </li>
-</ul>
-
