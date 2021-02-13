@@ -1,9 +1,24 @@
-<div class="mat-typography container">
-  <h2>Terms</h2>
-  <mat-action-list>
-      <button mat-list-item *ngFor="let term of terms$ | async; last as last">
-          Term: {{term.term}}
-          <mat-divider *ngIf="!last"></mat-divider>
-      </button>
-  </mat-action-list>
+<mat-toolbar color='primary'>
+  
+  <a mat-button routerLink="/">
+    <mat-icon aria-hidden="false" aria-label="Home">home</mat-icon>
+    <span class="button-text">Mvskoke Language Dictionary</span>
+  </a>
+
+  <span class="fill-remaining-space"></span>
+  
+</mat-toolbar>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="mat-typography">
+      <h2>Terms</h2>
+    </div>
+    <mat-action-list>
+        <button mat-list-item *ngFor="let term of terms$ | async; last as last">
+            {{ term.term }} : {{ term.definitions[0].definition}}
+            <mat-divider *ngIf="!last"></mat-divider>
+        </button>
+    </mat-action-list>
+  </div>
 </div>

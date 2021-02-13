@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "mvskoke-language"
+  },
+  "targets": {
+    "mvskoke-language": {
+      "hosting": {
+        "angular-app": [
+          "mvskoke-language"
+        ]
+      }
+    }
   }
 }

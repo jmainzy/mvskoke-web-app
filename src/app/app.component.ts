@@ -1,7 +1,10 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Observable} from 'rxjs';
 import { FirestoreService } from './firestore.service';
-import {Term} from './terms/term.model';
+
+import {Term} from './model/term.model';
+
+// Note: For search, probably use https://www.algolia.com/
 
 @Component({
   selector: 'app-root',
