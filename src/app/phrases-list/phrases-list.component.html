@@ -1,1 +1,17 @@
-<p>phrases-list works!</p>
+<mat-accordion>
+    <mat-expansion-panel 
+        *ngFor="let phrase of phrases$ | async; last as last"
+    >
+        <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+                {{phrase.phraseSource}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{phrase.phraseTarget}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <!-- content -->
+        <span >{{phrase.phraseSource}}</span>
+    </mat-expansion-panel>
+</mat-accordion>

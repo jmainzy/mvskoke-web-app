@@ -6,6 +6,7 @@ import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 
 import { Term } from './model/term.model';
 import { Definition } from './model/definition.model';
+import { Phrase } from './model/phrase.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,10 @@ export class FirestoreService {
 
   getTerms(): Observable<Term[]> {
     return this.terms$
+  }
+
+  getPhrases(): Observable<Phrase[]> {
+    return this.firestore.collection<Phrase>('phrases').valueChanges({ idField: 'id'})
   }
 
   // getEntries(): Observable<Entry[]> {
