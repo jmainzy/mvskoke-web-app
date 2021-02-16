@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -24,16 +25,21 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { TermComponent } from './term/term.component';
 import { TermsListComponent } from './terms-list/terms-list.component';
+import { PhrasesListComponent } from './phrases-list/phrases-list.component';
+import { CollectionsListComponent } from './collections-list/collections-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TermComponent,
     TermsListComponent,
+    PhrasesListComponent,
+    CollectionsListComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireAuthGuardModule,
@@ -45,7 +51,7 @@ import { TermsListComponent } from './terms-list/terms-list.component';
     MatListModule,
     MatCardModule,
     MatDividerModule,
-    MatTableModule,
+    MatTabsModule,
     MatTooltipModule,
     MatProgressBarModule,
     MatSnackBarModule,

@@ -8,12 +8,13 @@
     padding-right: 6px; /* Add 24px to align the text in the center since the icon's width is 24px */
 }
 
-.wrapper {
-    align-items: center;
-}
-
 .container {
     max-width: 600px;
     margin: auto;
     padding: 32px;
+}
+
+.tab-container {
+    padding-top: 4px;
+    margin: 4px;
 }
