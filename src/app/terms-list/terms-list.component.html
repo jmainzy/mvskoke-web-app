@@ -1,0 +1,20 @@
+<div class="mat-typography">
+    <h2>Words</h2>
+  </div>
+<mat-accordion>
+    <mat-expansion-panel 
+        *ngFor="let term of terms$ | async; last as last"
+    >
+        <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+                {{term.term}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{term.definitions[0].definition}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <!-- content -->
+        <app-term [term]="term"></app-term>
+    </mat-expansion-panel>
+</mat-accordion>

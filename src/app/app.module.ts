@@ -22,10 +22,14 @@ import { AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { TermComponent } from './term/term.component';
+import { TermsListComponent } from './terms-list/terms-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TermComponent,
+    TermsListComponent,
   ],
   imports: [
     BrowserModule,

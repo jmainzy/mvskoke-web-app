@@ -11,14 +11,6 @@
 
 <div class="wrapper">
   <div class="container">
-    <div class="mat-typography">
-      <h2>Terms</h2>
-    </div>
-    <mat-action-list>
-        <button mat-list-item *ngFor="let term of terms$ | async; last as last">
-            {{ term.term }} : {{ term.definitions[0].definition}}
-            <mat-divider *ngIf="!last"></mat-divider>
-        </button>
-    </mat-action-list>
+    <app-terms-list></app-terms-list>
   </div>
 </div>

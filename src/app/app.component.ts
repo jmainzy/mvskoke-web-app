@@ -1,8 +1,4 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
-import {Observable} from 'rxjs';
-import { FirestoreService } from './firestore.service';
-
-import {Term} from './model/term.model';
 
 // Note: For search, probably use https://www.algolia.com/
 
@@ -13,11 +9,9 @@ import {Term} from './model/term.model';
 })
 
 export class AppComponent implements OnInit {
-  terms$!: Observable<Term[]>;
 
-  constructor(private firestoreService: FirestoreService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.terms$ = this.firestoreService.getTerms();
   }
 }
