@@ -1,17 +1,4 @@
-<mat-accordion>
-    <mat-expansion-panel 
-        *ngFor="let phrase of phrases$ | async; last as last"
-    >
-        <mat-expansion-panel-header>
-            <mat-panel-title class="title">
-                {{phrase.phraseSource}}
-            </mat-panel-title>
-            <mat-panel-description>
-                {{phrase.phraseTarget}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-    
+<mat-card class="card" *ngFor="let phrase of phrases$ | async; last as last">
         <!-- content -->
-        <span >{{phrase.phraseSource}}</span>
-    </mat-expansion-panel>
-</mat-accordion>
+        <app-phrase [phrase]='phrase'></app-phrase>
+</mat-card>

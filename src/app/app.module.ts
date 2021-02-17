@@ -27,6 +27,7 @@ import { TermComponent } from './term/term.component';
 import { TermsListComponent } from './terms-list/terms-list.component';
 import { PhrasesListComponent } from './phrases-list/phrases-list.component';
 import { CollectionsListComponent } from './collections-list/collections-list.component';
+import { PhraseComponent } from './phrase/phrase.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CollectionsListComponent } from './collections-list/collections-list.co
     TermsListComponent,
     PhrasesListComponent,
     CollectionsListComponent,
+    PhraseComponent,
   ],
   imports: [
     BrowserModule,

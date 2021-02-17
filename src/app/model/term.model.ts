@@ -7,4 +7,8 @@ export class Term {
       public term: string,
       public definitions: Array<Definition>
     ) { }
+
+    hasDefinitions(): Boolean {
+      return this.definitions.length > 0;
+    }
 }

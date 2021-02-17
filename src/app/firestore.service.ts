@@ -32,6 +32,11 @@ export class FirestoreService {
     return this.firestore.collection<Phrase>('phrases').valueChanges({ idField: 'id'})
   }
 
+  getPhrase(doc: DocumentReference): Observable<Phrase | undefined> {
+    console.log("getting phrase")
+    return this.firestore.doc<Phrase>(doc).valueChanges()
+  }
+
   // getEntries(): Observable<Entry[]> {
 
   //   return this.terms$.pipe(
