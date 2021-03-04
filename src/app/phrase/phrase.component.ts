@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./phrase.component.css']
 })
 export class PhraseComponent implements OnInit {
+  player = new Audio;
 
   @Input() phrase: Phrase = {id: "", phraseSource: "", phraseTarget: "", audio: []};
   constructor(private storage: AngularFireStorage) {
@@ -22,7 +23,13 @@ export class PhraseComponent implements OnInit {
     const ref = this.storage.ref('audio/'+audioRef);
     ref.getDownloadURL().subscribe( url => {
       console.log("url: "+url);
+      this.playAudio(url)
     })
+  }
+
+  playAudio(url: string) {
+    this.player.src = url;
+    this.player.play();
   }
 
 }

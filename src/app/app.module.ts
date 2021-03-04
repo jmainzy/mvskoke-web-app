@@ -28,6 +28,8 @@ import { TermsListComponent } from './terms-list/terms-list.component';
 import { PhrasesListComponent } from './phrases-list/phrases-list.component';
 import { CollectionsListComponent } from './collections-list/collections-list.component';
 import { PhraseComponent } from './phrase/phrase.component';
+import { CollectionComponent } from './collection/collection.component';
+import { CollectionItemComponent } from './collection-item/collection-item.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { PhraseComponent } from './phrase/phrase.component';
     PhrasesListComponent,
     CollectionsListComponent,
     PhraseComponent,
+    CollectionComponent,
+    CollectionItemComponent,
   ],
   imports: [
     BrowserModule,

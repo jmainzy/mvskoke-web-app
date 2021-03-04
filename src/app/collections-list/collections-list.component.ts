@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Collection } from '../model/collection.model';
+import { FirestoreService } from '../firestore.service';
 
 @Component({
   selector: 'app-collections-list',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionsListComponent implements OnInit {
 
-  constructor() { }
+  collections$!: Observable<Collection[]>;
+
+  constructor(private firestoreService: FirestoreService) { }
 
   ngOnInit(): void {
+    this.collections$ = this.firestoreService.getCollections();
   }
 
 }

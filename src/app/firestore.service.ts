@@ -7,6 +7,7 @@ import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { Term } from './model/term.model';
 import { Definition } from './model/definition.model';
 import { Phrase } from './model/phrase.model';
+import { Collection } from './model/collection.model';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,10 @@ export class FirestoreService {
   getPhrase(doc: DocumentReference): Observable<Phrase | undefined> {
     console.log("getting phrase")
     return this.firestore.doc<Phrase>(doc).valueChanges()
+  }
+
+  getCollections(): Observable<Collection[]> {
+    return this.firestore.collection<Collection>('collections').valueChanges({idField: 'id'})
   }
 
   // getEntries(): Observable<Entry[]> {
