@@ -23,11 +23,12 @@ export class AppComponent {
             label: 'Phrases',
             link: './phrases',
             index: 1
-        }, {
-            label: 'Collections',
-            link: './collections',
-            index: 2
         }, 
+        // {
+        //     label: 'Collections',
+        //     link: './collections',
+        //     index: 2
+        // }, 
     ];
   }
 

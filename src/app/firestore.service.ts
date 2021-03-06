@@ -19,7 +19,7 @@ export class FirestoreService {
   private terms$: Observable<Term[]>;
 
   constructor(private firestore: AngularFirestore) {
-    this.terms$ = this.firestore.collection<Term>('terms').valueChanges({ idField: "id" }).pipe(
+    this.terms$ = this.firestore.collection<Term>('terms', ref => ref.orderBy('term')).valueChanges({ idField: "id" }).pipe(
       shareReplay(1) // This should allow multiple subscribers to share this subscription.
     );
     
@@ -30,7 +30,7 @@ export class FirestoreService {
   }
 
   getPhrases(): Observable<Phrase[]> {
-    return this.firestore.collection<Phrase>('phrases').valueChanges({ idField: 'id'})
+    return this.firestore.collection<Phrase>('phrases', ref => ref.orderBy('phraseSource')).valueChanges({ idField: 'id'})
   }
 
   getPhrase(doc: DocumentReference): Observable<Phrase | undefined> {
