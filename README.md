@@ -26,3 +26,6 @@ If you would like to contribute to this project, please don't hesitate to contac
 ## Setup:
 Install (Angular)[https://angular.io/guide/setup-local]
 `npm install -g @angular/cli`
+
+## Mobile App
+Mobile app also in development using Flutter: https://github.com/jmainzy/mvskoke-language-app
