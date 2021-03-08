@@ -1,7 +1,7 @@
 # mvskoke-web-app
 Web app to host vocab, phrases, and recordings for the Mvskoke language.
 
-See it live here: https://mvskoke-language.web.app/
+See it live here: [mvskoke-language.web.app](https://mvskoke-language.web.app/)
 
 ## Purpose
 The goal is to have a way for tribal members to easily add phrases and recordings of fluent speakers.  Currently there exists a dictionary for the language, but for the purposes of language preservation and revitalization, hearing the language spoken is crucial.  A tool like this could supplement language learning by providing a searchable database of phrases, so that learners can see and hear how words are used in sentences.  
@@ -24,7 +24,7 @@ Front-end:
 If you would like to contribute to this project, please don't hesitate to contact me at juliamainzinger@gmail.com
 
 ## Setup:
-Install (Angular)[https://angular.io/guide/setup-local]
+Install [Angular](https://angular.io/guide/setup-local)
 `npm install -g @angular/cli`
 
 ## Mobile App
