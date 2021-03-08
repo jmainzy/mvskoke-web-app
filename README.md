@@ -13,6 +13,7 @@ Firebase back-end:
   - Cloud Firestore for database of terms, phrases, etc
   - Storage for audio
   - Hosting for web app
+
 Front-end:
   - Angular, possibly considering switching to React
 
